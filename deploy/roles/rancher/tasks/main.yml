@@ -1,10 +1,10 @@
 ---
 - name: Clone Rancher Artifacts
   become: yes
-  git:
-    repo: https://gerrit.onap.org/r/oom
-    dest: /mnt/onap/oom
-    clone: yes
+#  git:
+#    repo: https://gerrit.onap.org/r/oom
+#    dest: /mnt/onap/oom
+#    clone: yes
 
 #- name: Clone Rancher Artifacts
 #  shell: 'cd /mnt/onap/oom && git pull https://gerrit.onap.org/r/oom refs/changes/19/32019/6 --commit --no-edit'
