@@ -10,8 +10,8 @@
   roles:
 #    - common
 #    - docker
-    - rancher
-#    - k8s
+#    - rancher
+    - k8s
 #    - helm
 #    - oom
 
