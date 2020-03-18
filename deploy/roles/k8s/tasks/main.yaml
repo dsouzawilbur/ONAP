@@ -1,33 +1,33 @@
 ---
-- name: Add k8s repo key
-  become: true
-  apt_key:
-      url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
-      state: present
-  register: add_k8s_key
-  ignore_errors: true
+#- name: Add k8s repo key
+#  become: true
+#  apt_key:
+#      url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+#      state: present
+#  register: add_k8s_key
+#  ignore_errors: true
 
 
-- name: Add k8s repo key
-  become: true
-  apt_repository:
-      repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
-      update_cache: yes
-      state: present
+#- name: Add k8s repo key
+#  become: true
+#  apt_repository:
+#      repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+#      update_cache: yes
+#      state: present
 
-- name: Install k8s
-  become: true
-  apt: 
-    name: "{{ item }}"
-    state: present
-  with_items:
-      - kubelet
-      - kubeadm
-      - kubectl
+#- name: Install k8s
+#  become: true
+#  apt: 
+#    name: "{{ item }}"
+#    state: present
+#  with_items:
+#      - kubelet
+#      - kubeadm
+#      - kubectl
 
-- name: Reset kubernetes cluster
-  become: true
-  shell: kubeadm reset
+#- name: Reset kubernetes cluster
+#  become: true
+#  shell: kubeadm reset
 
 - name: Create k8s master node
   become: true
