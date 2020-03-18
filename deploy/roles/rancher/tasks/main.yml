@@ -6,8 +6,8 @@
     dest: /mnt/onap/oom
     clone: yes
 
-- name: Clone Rancher Artifacts
-  shell: 'cd /mnt/onap/oom && git pull https://gerrit.onap.org/r/oom refs/changes/19/32019/6 --commit --no-edit'
+#- name: Clone Rancher Artifacts
+#  shell: 'cd /mnt/onap/oom && git pull https://gerrit.onap.org/r/oom refs/changes/19/32019/6 --commit --no-edit'
 
 - name: Discover local IP
   shell: ifconfig | grep -A 1 'ens3' | tail -1 | cut -d ':' -f 2 | cut -d ' ' -f 1
