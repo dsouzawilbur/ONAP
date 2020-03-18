@@ -19,12 +19,12 @@
     },
     "AnsibleRepository": {
       "Type": "String",
-      "Default": "https://github.com/moffzilla/ONAP-deploy",
+      "Default": "https://github.com/dsouzawilbur/ONAP/",
       "Description": "The git repository of Ansible playbooks"
     },
     "AnsiblePlaybook": {
       "Type": "String",
-      "Default": "deploy/site.yaml",
+      "Default": "deploy/ap_onap.yml",
       "Description": "The Ansible playbook to use"
     },
     "OOMTemplate": {
